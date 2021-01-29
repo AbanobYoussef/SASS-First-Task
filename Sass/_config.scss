@@ -1,0 +1,25 @@
+/* Partial Scss File known with the underscore */
+
+$light-color:#f4f4f4;
+$font-stack:Arial,
+Helvetica,
+sans-serif;
+$primary-color:#0e6cff;
+//$primary-color:#e0ffff; // try to change the primary-color to see the functions work
+$secondary-color:#ff8700;
+// set text color based on background
+@function set-text-color($color) {
+    @if (lightness($color)>70) {
+        /* builtIn function */
+        @return #333;
+    }
+    @else {
+        @return #fff;
+    }
+}
+
+//set background & text color
+@mixin set-background ($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}

@@ -1,0 +1,22 @@
+    %btn {
+        /* a placeholder selector that helps that non-html element to be inherted */
+        display: inline-block;
+        border-radius: 5px;
+        padding: 8px 20px;
+        margin: 3px;
+        &:hover {
+            transform: scale(.95);
+        }
+    }
+    
+    .btn-primary {
+        @extend %btn;
+        @include set-background (lighten( $primary-color, 10%));
+        /* lighten is builtIn function */
+    }
+    
+    .btn-secondary {
+        @extend %btn;
+        background-color: $secondary-color;
+        @include set-background ($secondary-color);
+    }

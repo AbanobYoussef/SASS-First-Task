@@ -1,6 +1,6 @@
-@import'confid';
-@import'utilites';
-@import'buttons';
+@import './config';
+@import './utilites';
+@import './buttons';
 * {
     margin: 0;
     padding: 0;
@@ -23,8 +23,7 @@ a {
 }
 
 .showcase {
-    background-color: $primart-color;
-    color: #fff;
+    @include set-background ($primary-color);
     height: 450px;
     nav {
         display: flex;
@@ -36,7 +35,7 @@ a {
             li {
                 padding: 15px;
                 a {
-                    color: #fff;
+                    color: set-text-color($primary-color);
                     &:hover {
                         color: $secondary-color;
                     }
@@ -44,8 +43,8 @@ a {
             }
         }
     }
-    &-content/* & refres to .showcase*/
-    {
+    &-content {
+        /* & refres to .showcase*/
         height: 100%;
         display: flex;
         align-items: flex-start;
