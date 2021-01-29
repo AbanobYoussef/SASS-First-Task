@@ -1,6 +1,4 @@
 @import './config';
-@import './utilites';
-@import './buttons';
 * {
     margin: 0;
     padding: 0;
@@ -60,3 +58,7 @@ a {
         }
     }
 }
+
+@import './utilites';
+@import './buttons';
+@import './mobile';
